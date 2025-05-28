@@ -4,17 +4,6 @@
 <head>
     <title>Van Harte Gefeliciteerd! Anny 61 jaar!</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-    <script>
-        function PlayMusic() {
-            var play = document.getElementById("music");
-            play.play();
-        }
-
-        $(document).ready(function () {
-            setTimeout(PlayMusic, 3000); // Play music after 3 seconds
-        });
-    </script>
 </head>
 
 <body>
@@ -25,9 +14,18 @@
     <h3>Daarom gaan we op 3 oktober naar Son Monieux in 013</h3>
     <p><i>xx Bart + Kim<br> Laura x Thymen, Emma & Noah<br> Jaap + Rebecca</i></p>
 
+    <button onclick="playMusic()">Play Birthday Song!</button>
+
     <audio id="music">
         <source src="assets/song.mp3" type="audio/mpeg">
     </audio>
+
+    <script>
+        function playMusic() {
+            var play = document.getElementById("music");
+            play.play();
+        }
+    </script>
 
 </body>
 
