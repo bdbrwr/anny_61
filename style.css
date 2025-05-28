@@ -1,19 +1,47 @@
-/* Replace 'selector' with the actual HTML element (like body) or a CSS class (like .my-text) */
-selector {
+/* Regular */
+@font-face {
+    font-family: 'Goldman Sans';
+    src: url('./fonts/GoldmanSans_Rg.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Italic */
+@font-face {
+    font-family: 'Goldman Sans';
+    src: url('./fonts/GoldmanSans_It.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Bold */
+@font-face {
+    font-family: 'Goldman Sans';
+    src: url('./fonts/GoldmanSans_Blk.ttf') format('truetype');
+    /* 'Blk' is often used as a bold or black weight */
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Light */
+@font-face {
+    font-family: 'Goldman Sans';
+    src: url('./fonts/GoldmanSans_Lt.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Medium (optional) */
+@font-face {
+    font-family: 'Goldman Sans';
+    src: url('./fonts/GoldmanSans_Md.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Apply to the whole page */
+body {
     background-color: black;
-    /* Sets the background color to black */
     color: white;
-    /* Sets the text color to white */
-    font-family: 'Your Font Name', sans-serif;
-    /* Replace 'Your Font Name' with the font you want to use */
+    font-family: 'Goldman Sans', sans-serif;
 }
-
-/* To remove styles that might be creating circles, you would need to target those specific elements as well. */
-/* For example, if elements with the class 'circle' are creating circles: */
-/*
-.circle {
-  border-radius: 0; /* Removes rounded corners if they were used */
-/* You might need to add other styles here depending on how the circle was created */
-}
-
-*/
