@@ -1,4 +1,4 @@
-/* Regular */
+/* Font declarations (same as before) */
 @font-face {
     font-family: 'Goldman Sans';
     src: url('./fonts/GoldmanSans_Rg.ttf') format('truetype');
@@ -6,7 +6,6 @@
     font-style: normal;
 }
 
-/* Italic */
 @font-face {
     font-family: 'Goldman Sans';
     src: url('./fonts/GoldmanSans_It.ttf') format('truetype');
@@ -14,16 +13,13 @@
     font-style: italic;
 }
 
-/* Bold */
 @font-face {
     font-family: 'Goldman Sans';
     src: url('./fonts/GoldmanSans_Blk.ttf') format('truetype');
-    /* 'Blk' is often used as a bold or black weight */
     font-weight: 700;
     font-style: normal;
 }
 
-/* Light */
 @font-face {
     font-family: 'Goldman Sans';
     src: url('./fonts/GoldmanSans_Lt.ttf') format('truetype');
@@ -31,7 +27,6 @@
     font-style: normal;
 }
 
-/* Medium (optional) */
 @font-face {
     font-family: 'Goldman Sans';
     src: url('./fonts/GoldmanSans_Md.ttf') format('truetype');
@@ -39,9 +34,25 @@
     font-style: normal;
 }
 
-/* Apply to the whole page */
+/* Body styles */
 body {
     background-color: black;
     color: white;
     font-family: 'Goldman Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Image styling */
+img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
 }
