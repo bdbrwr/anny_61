@@ -1,123 +1,19 @@
-/* Import the Goldman Sans font - replace with your actual font source */
-/* Example using a hypothetical Google Fonts link (check Google Fonts for availability) */
-@import url('https://fonts.googleapis.com/css2?family=Goldman+Sans:wght@400;700&display=swap');
-
-body {
-    background-color: #000;
-    /* Dark background */
-    margin: 0;
-    padding: 0;
-    font-family: 'Goldman Sans', sans-serif;
-    /* Use Goldman Sans, with sans-serif as fallback */
-    color: #fff;
-    /* White text */
-    display: flex;
-    /* Use flexbox to center content */
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    /* Ensure full viewport height */
-    overflow: hidden;
-    /* Hide overflow from background rings */
-    position: relative;
-    /* Needed for positioning the QR code and rings */
+/* Replace 'selector' with the actual HTML element (like body) or a CSS class (like .my-text) */
+selector {
+    background-color: black;
+    /* Sets the background color to black */
+    color: white;
+    /* Sets the text color to white */
+    font-family: 'Your Font Name', sans-serif;
+    /* Replace 'Your Font Name' with the font you want to use */
 }
 
-/* Container for the content (QR code and any text) */
-.container {
-    text-align: center;
-    /* Center text within the container */
-    z-index: 10;
-    /* Ensure container is above the background rings */
+/* To remove styles that might be creating circles, you would need to target those specific elements as well. */
+/* For example, if elements with the class 'circle' are creating circles: */
+/*
+.circle {
+  border-radius: 0; /* Removes rounded corners if they were used */
+/* You might need to add other styles here depending on how the circle was created */
 }
 
-/* Style for the QR code container (assuming an img tag or similar) */
-.qr-code {
-    width: 250px;
-    /* Adjust size as needed */
-    height: 250px;
-    /* Adjust size as needed */
-    background-color: #fff;
-    /* White background for the QR code area */
-    padding: 20px;
-    /* Add some padding around the QR code */
-    box-sizing: border-box;
-    /* Include padding in the element's total width and height */
-    margin-bottom: 20px;
-    /* Space below the QR code */
-}
-
-/* Basic styling for the QR code image if you're using one */
-.qr-code img {
-    display: block;
-    /* Remove extra space below the image */
-    max-width: 100%;
-    height: auto;
-}
-
-
-/* Styling for the colorful rings */
-/* We'll use a pseudo-element for the background rings */
-body::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* Center the rings */
-    width: 1000px;
-    /* Adjust size of the ring area */
-    height: 1000px;
-    /* Adjust size of the ring area */
-    border-radius: 50%;
-    /* Make it circular */
-    /* Use multiple radial gradients to create the concentric rings */
-    background:
-        /* Outermost ring (adjust colors and positions as needed) */
-        radial-gradient(circle at center, transparent 0%, transparent 400px, #ff6699 410px, #ff6699 420px, transparent 430px),
-        radial-gradient(circle at center, transparent 0%, transparent 350px, #ffcc00 360px, #ffcc00 370px, transparent 380px),
-        radial-gradient(circle at center, transparent 0%, transparent 300px, #66ccff 310px, #66ccff 320px, transparent 330px),
-        radial-gradient(circle at center, transparent 0%, transparent 250px, #9966ff 260px, #9966ff 270px, transparent 280px),
-        radial-gradient(circle at center, transparent 0%, transparent 200px, #00cc99 210px, #00cc99 220px, transparent 230px),
-        radial-gradient(circle at center, transparent 0%, transparent 150px, #ff9933 160px, #ff9933 170px, transparent 180px),
-        radial-gradient(circle at center, transparent 0%, transparent 100px, #cc66ff 110px, #cc66ff 120px, transparent 130px),
-        radial-gradient(circle at center, transparent 0%, transparent 50px, #3399ff 60px, #3399ff 70px, transparent 80px);
-
-    background-size: 100% 100%;
-    /* Ensure the gradients cover the entire area */
-    z-index: 1;
-    /* Place the rings behind the content */
-    pointer-events: none;
-    /* Prevent the pseudo-element from interfering with mouse events */
-}
-
-/* Basic text styling */
-h1,
-p {
-    margin: 0;
-    padding: 5px 0;
-}
-
-h1 {
-    font-size: 2em;
-    font-weight: 700;
-    /* Use the bold weight of Goldman Sans */
-}
-
-p {
-    font-size: 1.2em;
-    font-weight: 400;
-    /* Use the regular weight of Goldman Sans */
-}
-
-/* You might want to add styles for links, buttons, etc. */
-/* Example: */
-a {
-    color: #66ccff;
-    /* Example link color */
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
+*/
